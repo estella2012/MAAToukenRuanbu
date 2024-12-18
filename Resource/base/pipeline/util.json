@@ -1,0 +1,17 @@
+{
+  "王点检测7-4": {
+    "recognition": "TemplateMatch",
+    "next": "王点前返回本丸",
+    "enabled": false,
+    "focus": true,
+    "focus_tip": "已在7-4王点前",
+    "roi": [
+      894,
+      136,
+      127,
+      100
+    ],
+    "template": "7-4王点前.png",
+    "threshold": 0.9
+  }
+}

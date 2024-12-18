@@ -1,0 +1,308 @@
+{
+  "开始主线战斗": {
+    "next": [
+      "继续进军",
+      "演练结束",
+      "即刻出阵",
+      "选择时代",
+      "点击出阵2",
+      "点击出阵",
+      "等待结束战斗"
+    ],
+    "focus": false
+  },
+  "点击出阵": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击出阵2",
+      "等待结束战斗"
+    ],
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": "點擊出阵。。。",
+    "roi": [
+      1174,
+      77,
+      85,
+      50
+    ],
+    "expected": "出阵",
+    "target": [
+      1174,
+      77,
+      85,
+      50
+    ]
+  },
+  "点击出阵2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "选择时代",
+    "post_wait_freezes": 2000,
+    "roi": [
+      472,
+      347,
+      226,
+      81
+    ],
+    "expected": "前往合战场",
+    "target": [
+      505,
+      156,
+      153,
+      122
+    ]
+  },
+  "选择时代": {
+    "recognition": "OCR",
+    "next": [
+      "维新的记忆",
+      "江户的记忆",
+      "织丰的记忆",
+      "战国的记忆",
+      "武家的记忆",
+      "池田屋的记忆",
+      "延享的记忆",
+      "青野原的记忆"
+    ],
+    "interrupt": "点击向右",
+    "focus": true,
+    "focus_tip": "选择时代。。。",
+    "roi": [
+      493,
+      68,
+      168,
+      45
+    ],
+    "expected": [
+      "合战场选择",
+      "合战场"
+    ]
+  },
+  "点击向右": {
+    "action": "Click",
+    "target": [
+      447,
+      198,
+      28,
+      77
+    ]
+  },
+  "维新的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择1.维新的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "维新的记忆",
+      "维新"
+    ],
+    "target": true
+  },
+  "江户的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择2.江户的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "江户的记忆",
+      "江户"
+    ],
+    "target": true
+  },
+  "织丰的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择3.织丰的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "织丰的记忆",
+      "织丰"
+    ],
+    "target": true
+  },
+  "战国的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择4.战国的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "战国的记忆",
+      "战国"
+    ],
+    "target": true
+  },
+  "武家的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择5.武家的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "武家的记忆",
+      "武家"
+    ],
+    "target": true
+  },
+  "池田屋的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择6.池田屋的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "池田屋的记忆",
+      "池田屋"
+    ],
+    "target": true
+  },
+  "延享的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择7.延享的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "延享的记忆",
+      "延享"
+    ],
+    "target": true
+  },
+  "青野原的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择8.青野原的记忆。。。",
+    "roi": [
+      127,
+      183,
+      355,
+      106
+    ],
+    "expected": [
+      "青野原的记忆",
+      "青野原"
+    ],
+    "target": true
+  },
+  "选择队伍": {
+    "next": [
+      "队1",
+      "队2",
+      "队3"
+    ],
+    "timeout": 1000
+  }
+}

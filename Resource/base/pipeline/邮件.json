@@ -1,0 +1,79 @@
+{
+  "打开邮件": {
+    "next": "点击邮件",
+    "interrupt": [
+      "返回主界面",
+      "展开"
+    ]
+  },
+  "点击邮件": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": "一键领取邮件",
+    "post_wait_freezes": 2000,
+    "focus": true,
+    "focus_tip": "点击邮件...",
+    "roi": [
+      129,
+      438,
+      52,
+      32
+    ],
+    "template": "mail.png",
+    "target": true
+  },
+  "一键领取邮件": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "已领取全部邮件",
+    "interrupt": [
+      "点击屏幕",
+      "一键领取邮件"
+    ],
+    "post_wait_freezes": 500,
+    "roi": [
+      847,
+      590,
+      150,
+      37
+    ],
+    "expected": [
+      "一键领取",
+      "领取"
+    ],
+    "target": "True"
+  },
+  "已领取全部邮件": {
+    "recognition": "TemplateMatch",
+    "roi": [
+      832,
+      575,
+      176,
+      67
+    ],
+    "template": "一键领取_grey.png"
+  },
+  "点击屏幕": {
+    "action": "Click"
+  },
+  "展开": {
+    "recognition": "OCR",
+    "action": "Click",
+    "post_wait_freezes": 2000,
+    "focus": true,
+    "focus_tip": "展开选项....",
+    "roi": [
+      94,
+      475,
+      26,
+      29
+    ],
+    "expected": "开",
+    "target": [
+      95,
+      490,
+      22,
+      48
+    ]
+  }
+}
