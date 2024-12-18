@@ -1,6 +1,0 @@
-2024-12-01 20:36:50.3147 ERROR System.IO.DirectoryNotFoundException: Could not find a part of the path 'F:\MAA\MAATouken\Resource\base\pipeline\sample.json'.
-   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
-   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
-   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
-   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
-   at MFAWPF.Views.MainWindow.LoadTask() in F:\RiderProjects\MFAWPF\MFAWPF\Views\MainWindow.xaml.cs:line 281
