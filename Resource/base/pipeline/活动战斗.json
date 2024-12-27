@@ -3,7 +3,8 @@
     "next": [
       "继续进军",
       "演练结束",
-      "出阵"
+      "出阵",
+      "等待结束战斗"
     ]
   },
   "切换主界面": {
@@ -281,17 +282,16 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
+      "关闭重伤弹窗",
       "王点检测7-4",
       "继续进军",
       "演练结束",
       "阵型选择",
-      "点击出阵"
+      "点击出阵",
+      "等待结束战斗"
     ],
-    "interrupt": "等待结束战斗",
     "inverse": false,
     "post_wait_freezes": 500,
-    "focus": true,
-    "focus_tip": "等待结束战斗。。。",
     "target": [
       842,
       418,
@@ -395,7 +395,7 @@
   "王点前返回本丸": {
     "recognition": "OCR",
     "action": "Click",
-    "next": "点击是",
+    "next": "点击是后继续出阵",
     "focus": true,
     "focus_tip": "不进王点，返回本丸",
     "roi": [
@@ -472,7 +472,10 @@
   "点击是后继续出阵": {
     "recognition": "OCR",
     "action": "Click",
-    "next": "点击出阵",
+    "next": [
+      "点击出阵",
+      "等待结束战斗"
+    ],
     "roi": [
       489,
       446,

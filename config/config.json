@@ -5,11 +5,11 @@
   "LangIndex": 0,
   "EnableEdit": true,
   "AdbDevice": {
-    "Name": "MuMuPlayer12",
+    "Name": "MuMuPlayer12.1",
     "AdbPath": "C:/Program Files/Netease/MuMuPlayerGlobal-12.0/shell/adb.exe",
-    "AdbSerial": "127.0.0.1:16384",
+    "AdbSerial": "127.0.0.1:16416",
     "ScreencapMethods": 18446744073709551559,
-    "InputMethods": 18446744073709551607,
+    "InputMethods": 2,
     "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":0,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
   },
   "TaskItems": [
@@ -30,6 +30,7 @@
       "name": "活动e1",
       "entry": "开始活动战斗",
       "doc": "默认队3刷e1",
+      "check": true,
       "option": [
         {
           "name": "选择队伍",
@@ -102,27 +103,8 @@
     {
       "name": "主线loop",
       "entry": "开始主线战斗",
-      "check": false,
-      "option": [
-        {
-          "name": "选择时代",
-          "index": 4
-        },
-        {
-          "name": "选择地图",
-          "index": 3
-        },
-        {
-          "name": "选择队伍",
-          "index": 2
-        }
-      ]
-    },
-    {
-      "name": "主线loop",
-      "entry": "开始主线战斗",
       "doc": "仅7-4不进王点支持",
-      "check": true,
+      "check": false,
       "option": [
         {
           "name": "选择时代",
@@ -139,6 +121,30 @@
         {
           "name": "不进王点",
           "index": 0
+        }
+      ]
+    },
+    {
+      "name": "主线loop",
+      "entry": "开始主线战斗",
+      "doc": "仅7-4不进王点支持",
+      "check": false,
+      "option": [
+        {
+          "name": "选择时代",
+          "index": 0
+        },
+        {
+          "name": "选择地图",
+          "index": 0
+        },
+        {
+          "name": "选择队伍",
+          "index": 2
+        },
+        {
+          "name": "不进王点",
+          "index": 1
         }
       ]
     }
