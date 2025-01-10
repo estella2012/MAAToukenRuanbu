@@ -3,6 +3,8 @@
     "next": [
       "继续进军",
       "演练结束",
+      "部队选择",
+      "即刻出阵",
       "出阵",
       "等待结束战斗"
     ]
@@ -90,6 +92,7 @@
     "enabled": false,
     "pre_wait_freezes": 500,
     "post_wait_freezes": 1000,
+    "focus": true,
     "focus_tip": "e1",
     "target": [
       158,
@@ -161,8 +164,12 @@
   "即刻出阵": {
     "recognition": "OCR",
     "action": "Click",
-    "next": "等待结束战斗",
+    "next": [
+      "出阵确认",
+      "等待结束战斗"
+    ],
     "pre_wait_freezes": 1000,
+    "post_wait_freezes": 1000,
     "focus": true,
     "focus_tip": "即刻出阵！！！",
     "roi": [
@@ -189,27 +196,22 @@
     "next": [
       "队1",
       "队2",
-      "队3"
+      "队3",
+      "等待结束战斗"
     ],
     "enabled": true,
     "focus": true,
     "focus_tip": "部队选择。。。",
     "roi": [
-      854,
-      620,
-      174,
-      70
+      813,
+      527,
+      254,
+      192
     ],
     "expected": [
       "部队",
       "部队选择",
       "选择"
-    ],
-    "target": [
-      873,
-      635,
-      135,
-      36
     ]
   },
   "队1": {
@@ -217,86 +219,66 @@
     "action": "Click",
     "next": "即刻出阵",
     "enabled": true,
-    "post_wait_freezes": 1000,
     "focus": true,
     "focus_tip": "选择部队1。。。",
     "roi": [
-      577,
-      61,
-      125,
-      47
+      100,
+      48,
+      245,
+      176
     ],
-    "expected": "部队选择",
-    "target": [
-      190,
-      80,
-      32,
-      100
-    ]
+    "expected": "部"
   },
   "队2": {
     "recognition": "OCR",
     "action": "Click",
     "next": "即刻出阵",
     "enabled": true,
-    "post_wait_freezes": 1000,
     "focus": true,
     "focus_tip": "选择部队2。。。",
     "roi": [
-      577,
-      61,
-      125,
-      47
+      82,
+      215,
+      249,
+      169
     ],
-    "expected": "部队选择",
-    "target": [
-      190,
-      235,
-      30,
-      116
-    ]
+    "expected": "部"
   },
   "队3": {
     "recognition": "OCR",
     "action": "Click",
     "next": "即刻出阵",
     "enabled": true,
-    "post_wait_freezes": 1000,
     "focus": true,
     "focus_tip": "选择部队3。。。",
     "roi": [
-      577,
-      61,
-      125,
-      47
+      110,
+      385,
+      203,
+      165
     ],
-    "expected": "部队选择",
-    "target": [
-      190,
-      396,
-      32,
-      127
-    ]
+    "expected": "部"
   },
   "等待结束战斗": {
-    "recognition": "OCR",
+    "recognition": "DirectHit",
     "action": "Click",
     "next": [
+      "阵型选择",
+      "横队阵",
       "关闭重伤弹窗",
       "王点检测7-4",
       "继续进军",
       "演练结束",
-      "阵型选择",
       "点击出阵",
       "等待结束战斗"
     ],
     "inverse": false,
-    "post_wait_freezes": 500,
+    "post_wait_freezes": 200,
     "target": [
-      842,
-      418,
-      168,
-      59
+      5,
+      4,
+      196,
+      164
     ]
   },
   "继续进军": {
@@ -307,13 +289,13 @@
       "继续演练",
       "等待结束战斗"
     ],
-    "focus": true,
+    "focus": false,
     "focus_tip": "继续进军！！！",
     "roi": [
       736,
       427,
-      119,
-      115
+      124,
+      118
     ],
     "connected": false,
     "expected": [
@@ -321,10 +303,10 @@
       "进军"
     ],
     "target": [
-      736,
-      427,
-      119,
-      115
+      786,
+      473,
+      22,
+      23
     ]
   },
   "演练结束": {
@@ -493,34 +475,65 @@
   "阵型选择": {
     "recognition": "OCR",
     "action": "Click",
-    "next": "等待结束战斗",
-    "enabled": false,
+    "next": [
+      "确认选择",
+      "等待结束战斗"
+    ],
+    "enabled": true,
     "focus": true,
-    "focus_tip": "识别失败，选择逆行阵。。。",
+    "focus_tip": "选择逆行",
     "roi": [
-      1029,
-      361,
-      84,
-      183
+      805,
+      330,
+      348,
+      236
     ],
     "expected": [
-      "逆",
-      "行",
-      "阵"
+      "逆行阵",
+      "逆"
     ],
-    "target": [
-      1029,
-      361,
-      84,
-      183
-    ]
+    "target": true
   },
-  "未命名": {
+  "横队阵": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "确认选择",
+      "等待结束战斗"
+    ],
+    "enabled": false,
+    "focus": true,
+    "focus_tip": "选择横队",
     "roi": [
-      873,
-      635,
-      135,
-      36
-    ]
-  }
+      459,
+      101,
+      344,
+      237
+    ],
+    "expected": [
+      "横队阵",
+      "横"
+    ],
+    "target": true
+  },
+  "确认选择": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "等待结束战斗",
+    "expected": "确定",
+    "enabled": true
+  },
+  "出阵确认": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "等待结束战斗",
+    "roi": [
+      399,
+      486,
+      248,
+      75
+    ],
+    "expected": "确定"
+  },
+  "未命名": {}
 }

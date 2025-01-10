@@ -5,12 +5,12 @@
   "LangIndex": 0,
   "EnableEdit": true,
   "AdbDevice": {
-    "Name": "MuMuPlayer12.1",
+    "Name": "MuMuPlayer12",
     "AdbPath": "C:/Program Files/Netease/MuMuPlayerGlobal-12.0/shell/adb.exe",
     "AdbSerial": "127.0.0.1:16416",
     "ScreencapMethods": 18446744073709551559,
-    "InputMethods": 2,
-    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":0,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
+    "InputMethods": 18446744073709551607,
+    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":1,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
   },
   "TaskItems": [
     {
@@ -20,41 +20,18 @@
     },
     {
       "name": "领取邮件",
-      "entry": "打开邮件"
+      "entry": "打开邮件",
+      "check": false
     },
     {
       "name": "关闭公告",
-      "entry": "关闭公告"
-    },
-    {
-      "name": "活动e1",
-      "entry": "开始活动战斗",
-      "doc": "默认队3刷e1",
-      "check": true,
-      "option": [
-        {
-          "name": "选择队伍",
-          "index": 0
-        }
-      ],
-      "pipeline_override": {
-        "e1": {
-          "enabled": true
-        },
-        "e2": {
-          "enabled": false
-        },
-        "e3": {
-          "enabled": false
-        },
-        "e4": {
-          "enabled": false
-        }
-      }
+      "entry": "关闭公告",
+      "check": false
     },
     {
       "name": "活动e3",
       "entry": "开始活动战斗",
+      "check": false,
       "option": [
         {
           "name": "选择队伍",
@@ -79,6 +56,7 @@
     {
       "name": "活动e2",
       "entry": "开始活动战斗",
+      "check": false,
       "option": [
         {
           "name": "选择队伍",
@@ -147,9 +125,94 @@
           "index": 1
         }
       ]
+    },
+    {
+      "name": "活动e1",
+      "entry": "开始活动战斗",
+      "doc": "默认队3刷e1, 地图中直接开始可无限循环（战扩、地下城等）",
+      "check": false,
+      "option": [
+        {
+          "name": "选择队伍",
+          "index": 2
+        },
+        {
+          "name": "手动逆行",
+          "index": 0
+        }
+      ],
+      "pipeline_override": {
+        "e1": {
+          "next": [
+            "队3",
+            "部队选择"
+          ],
+          "enabled": true
+        },
+        "e2": {
+          "next": [
+            "队3",
+            "部队选择"
+          ],
+          "enabled": false
+        },
+        "e3": {
+          "next": [
+            "队3",
+            "部队选择"
+          ],
+          "enabled": false
+        },
+        "e4": {
+          "next": [
+            "队3",
+            "部队选择"
+          ],
+          "enabled": false
+        },
+        "等待结束战斗": {
+          "next": [
+            "阵型选择",
+            "关闭重伤弹窗",
+            "王点检测7-4",
+            "继续进军",
+            "演练结束",
+            "出阵",
+            "等待结束战斗"
+          ]
+        }
+      }
+    },
+    {
+      "name": "主线loop",
+      "entry": "开始主线战斗",
+      "doc": "仅7-4不进王点支持",
+      "check": true,
+      "option": [
+        {
+          "name": "选择时代",
+          "index": 7
+        },
+        {
+          "name": "选择地图",
+          "index": 0
+        },
+        {
+          "name": "选择队伍",
+          "index": 1
+        },
+        {
+          "name": "不进王点",
+          "index": 1
+        },
+        {
+          "name": "手动选择阵型",
+          "index": 1
+        }
+      ]
     }
   ],
-  "StartEmulator": true,
+  "StartEmulator": false,
   "WaitEmulatorTime": 30.0,
   "EmulatorPath": "C:\\Program Files\\Netease\\MuMuPlayerGlobal-12.0\\shell\\MuMuPlayer.exe"
 }
