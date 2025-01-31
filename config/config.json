@@ -9,7 +9,7 @@
     "AdbPath": "C:/Program Files/Netease/MuMuPlayerGlobal-12.0/shell/adb.exe",
     "AdbSerial": "127.0.0.1:16416",
     "ScreencapMethods": 18446744073709551559,
-    "InputMethods": 18446744073709551607,
+    "InputMethods": 2,
     "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":1,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
   },
   "TaskItems": [
@@ -110,15 +110,15 @@
       "option": [
         {
           "name": "选择时代",
-          "index": 0
+          "index": 2
         },
         {
           "name": "选择地图",
-          "index": 0
+          "index": 3
         },
         {
           "name": "选择队伍",
-          "index": 2
+          "index": 1
         },
         {
           "name": "不进王点",
@@ -186,20 +186,48 @@
     {
       "name": "主线loop",
       "entry": "开始主线战斗",
-      "doc": "仅7-4不进王点支持",
-      "check": true,
+      "doc": "仅7-4, 8-1, 日服4-4(2图测试)不进王点支持",
+      "check": false,
       "option": [
         {
           "name": "选择时代",
-          "index": 7
+          "index": 3
         },
         {
           "name": "选择地图",
-          "index": 0
+          "index": 2
         },
         {
           "name": "选择队伍",
-          "index": 1
+          "index": 0
+        },
+        {
+          "name": "不进王点",
+          "index": 0
+        },
+        {
+          "name": "手动选择阵型",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "主线loop",
+      "entry": "开始主线战斗",
+      "doc": "仅7-4, 8-1, 日服4-4(2图测试)不进王点支持",
+      "check": false,
+      "option": [
+        {
+          "name": "选择时代",
+          "index": 4
+        },
+        {
+          "name": "选择地图",
+          "index": 3
+        },
+        {
+          "name": "选择队伍",
+          "index": 0
         },
         {
           "name": "不进王点",
@@ -210,9 +238,65 @@
           "index": 1
         }
       ]
+    },
+    {
+      "name": "海联e4",
+      "entry": "开始活动战斗",
+      "doc": "默认队3刷e4",
+      "check": true,
+      "option": [
+        {
+          "name": "选择队伍",
+          "index": 2
+        }
+      ],
+      "pipeline_override": {
+        "开始活动战斗": {
+          "next": [
+            "海联通行证不足",
+            "海联通行证不足2",
+            "海联继续战斗",
+            "即刻出阵",
+            "部队选择",
+            "出阵",
+            "等待结束战斗"
+          ]
+        },
+        "e1": {
+          "enabled": false
+        },
+        "e2": {
+          "enabled": false
+        },
+        "e3": {
+          "enabled": false
+        },
+        "e4": {
+          "enabled": true
+        },
+        "等待结束战斗": {
+          "next": [
+            "海联通行证不足",
+            "海联通行证不足2",
+            "海联继续战斗",
+            "即刻出阵",
+            "出阵",
+            "等待结束战斗"
+          ]
+        },
+        "即刻出阵": {
+          "next": [
+            "海联通行证不足2",
+            "海联确认2",
+            "出阵确认",
+            "等待结束战斗"
+          ]
+        }
+      }
     }
   ],
   "StartEmulator": false,
   "WaitEmulatorTime": 30.0,
-  "EmulatorPath": "C:\\Program Files\\Netease\\MuMuPlayerGlobal-12.0\\shell\\MuMuPlayer.exe"
+  "EmulatorPath": "C:\\Program Files\\Netease\\MuMuPlayerGlobal-12.0\\shell\\MuMuPlayer.exe",
+  "ResourceIndex": 0
 }

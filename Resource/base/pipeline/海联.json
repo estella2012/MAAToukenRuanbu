@@ -1,0 +1,131 @@
+{
+  "海联继续战斗": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "等待结束战斗"
+    ],
+    "roi": [
+      757,
+      221,
+      174,
+      165
+    ],
+    "expected": [
+      "用现在的部队",
+      "战斗"
+    ]
+  },
+  "海联通行证不足": {
+    "recognition": "TemplateMatch",
+    "action": "DoNothing",
+    "next": [
+      "海联补充通行证"
+    ],
+    "focus": true,
+    "focus_succeeded": [
+      "通行证不足，正在补充通行证"
+    ],
+    "roi": [
+      222,
+      192,
+      333,
+      80
+    ],
+    "template": [
+      "海联通行证不足.png"
+    ],
+    "threshold": 0.9
+  },
+  "海联通行证不足2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "海联补充确认"
+    ],
+    "focus": true,
+    "focus_succeeded": [
+      "通行证不足，正在补充通行证"
+    ],
+    "roi": [
+      406,
+      394,
+      236,
+      78
+    ],
+    "expected": [
+      "补充"
+    ]
+  },
+  "海联补充通行证": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "海联补充确认"
+    ],
+    "roi": [
+      682,
+      203,
+      150,
+      62
+    ],
+    "expected": [
+      "用小判补充",
+      "补充",
+      "小"
+    ]
+  },
+  "海联补充确认": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "海联确认"
+    ],
+    "roi": [
+      544,
+      380,
+      190,
+      131
+    ],
+    "expected": [
+      "恢复3个",
+      "900",
+      "恢复"
+    ]
+  },
+  "海联确认": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "部队选择",
+      "即刻出阵",
+      "等待结束战斗"
+    ],
+    "roi": [
+      580,
+      421,
+      118,
+      90
+    ],
+    "expected": [
+      "确定"
+    ]
+  },
+  "海联确认2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "等待结束战斗"
+    ],
+    "post_wait_freezes": 2000,
+    "roi": [
+      520,
+      547,
+      237,
+      83
+    ],
+    "expected": [
+      "确定"
+    ]
+  }
+}

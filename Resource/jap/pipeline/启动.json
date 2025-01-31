@@ -1,0 +1,195 @@
+{
+  "启动": {
+    "next": [
+      "检查主界面",
+      "领取奖励"
+    ],
+    "interrupt": [
+      "取消远征",
+      "返回主界面",
+      "进入游戏",
+      "打开应用"
+    ]
+  },
+  "取消远征": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "继续对话",
+    "focus": true,
+    "focus_tip": "取消远征",
+    "roi": [
+      97,
+      580,
+      1001,
+      60
+    ],
+    "expected": "不太一样",
+    "target": [
+      1086,
+      653,
+      76,
+      48
+    ]
+  },
+  "更新": {
+    "recognition": "OCR",
+    "action": "Click",
+    "roi": [
+      352,
+      248,
+      241,
+      42
+    ],
+    "expected": "检测到存在更新",
+    "target": [
+      763,
+      517,
+      0,
+      0
+    ]
+  },
+  "进入游戏": {
+    "recognition": "OCR",
+    "action": "Click",
+    "focus": false,
+    "focus_tip": "进入本丸",
+    "roi": [
+      407,
+      503,
+      453,
+      115
+    ],
+    "expected": "游戏开始"
+  },
+  "检查主界面": {
+    "recognition": "OCR",
+    "next": "关闭公告",
+    "post_delay": 1000,
+    "roi": [
+      5,
+      58,
+      74,
+      196
+    ],
+    "expected": "本"
+  },
+  "关闭公告": {
+    "next": [
+      "已关闭全部公告",
+      "领取奖励",
+      "关闭全部公告"
+    ]
+  },
+  "领取奖励": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "关闭奖励",
+      "关闭全部公告"
+    ],
+    "focus": true,
+    "focus_tip": "领取奖励",
+    "roi": [
+      749,
+      542,
+      318,
+      166
+    ],
+    "expected": [
+      "领取奖励",
+      "领取"
+    ],
+    "target": true
+  },
+  "打开应用": {
+    "action": "StartApp",
+    "package": "com.youzu.djlw"
+  },
+  "取消弹窗": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "检查主界面",
+    "post_delay": 500,
+    "roi": [
+      715,
+      483,
+      77,
+      47
+    ],
+    "expected": "取消",
+    "target": "True"
+  },
+  "继续对话": {
+    "action": "Click",
+    "next": [
+      "检查主界面",
+      "取消弹窗",
+      "取消远征"
+    ],
+    "interrupt": "继续对话",
+    "target": [
+      1079,
+      631,
+      92,
+      76
+    ]
+  },
+  "空任务": {},
+  "返回主界面": {
+    "recognition": "OCR",
+    "action": "Click",
+    "focus": true,
+    "focus_tip": "返回主界面...",
+    "roi": [
+      1156,
+      657,
+      114,
+      53
+    ],
+    "expected": "本丸",
+    "target": "True"
+  },
+  "关闭全部公告": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "已关闭全部公告",
+      "领取奖励"
+    ],
+    "interrupt": "关闭全部公告",
+    "roi": [
+      905,
+      14,
+      191,
+      189
+    ],
+    "template": "x.png",
+    "threshold": 0.8,
+    "target": true
+  },
+  "已关闭全部公告": {
+    "recognition": "OCR",
+    "inverse": true,
+    "focus": true,
+    "focus_tip": "已关闭全部公告",
+    "roi": [
+      740,
+      545,
+      312,
+      159
+    ],
+    "expected": [
+      "今日不再弹出",
+      "弹出",
+      "领取奖励",
+      "领取"
+    ]
+  },
+  "关闭奖励": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": "x_o.png",
+    "threshold": 0.8,
+    "target": true
+  }
+}

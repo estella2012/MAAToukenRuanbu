@@ -1,4 +1,15 @@
 {
+  "王点检测": {
+    "next": [
+      "王点检测7-4",
+      "王点检测4-4",
+      "王点检测2-2",
+      "王点检测8-1",
+      "继续进军",
+      "等待结束战斗"
+    ],
+    "enabled": false
+  },
   "王点检测2-2": {
     "recognition": "TemplateMatch",
     "next": "王点前返回本丸",
@@ -16,17 +27,58 @@
   },
   "王点检测7-4": {
     "recognition": "TemplateMatch",
-    "next": "王点前返回本丸",
-    "enabled": false,
+    "next": [
+      "王点前返回本丸"
+    ],
+    "enabled": true,
     "focus": true,
-    "focus_tip": "已在7-4王点前",
+    "focus_tip": [
+      "已在7-4王点前"
+    ],
     "roi": [
       894,
       136,
       127,
       100
     ],
-    "template": "7-4王点前.png",
+    "template": [
+      "7-4王点前.png"
+    ],
+    "threshold": 0.9
+  },
+  "王点检测8-1": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "王点前返回本丸"
+    ],
+    "enabled": true,
+    "focus": true,
+    "focus_tip": [
+      "已在8-1王点前"
+    ],
+    "roi": [
+      853,
+      38,
+      179,
+      157
+    ],
+    "template": [
+      "8-1王点前.png"
+    ],
+    "threshold": 0.9
+  },
+  "王点检测4-4": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "王点前返回本丸"
+    ],
+    "focus": true,
+    "focus_succeeded": [
+      "4-4王点"
+    ],
+    "template": [
+      "4-4王点前.png"
+    ],
     "threshold": 0.9
   }
 }

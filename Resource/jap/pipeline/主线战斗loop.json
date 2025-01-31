@@ -1,0 +1,281 @@
+{
+  "开始主线战斗": {
+    "next": [
+      "继续进军",
+      "演练结束",
+      "即刻出阵",
+      "选择时代",
+      "点击出阵2",
+      "点击出阵",
+      "等待结束战斗"
+    ],
+    "focus": false
+  },
+  "点击出阵": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击出阵2",
+      "等待结束战斗"
+    ],
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": [
+      "點擊出阵。。。"
+    ],
+    "roi": [
+      1232,
+      584,
+      47,
+      114
+    ],
+    "expected": [
+      "出"
+    ]
+  },
+  "点击出阵2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "选择时代"
+    ],
+    "post_wait_freezes": 2000,
+    "roi": [
+      1058,
+      586,
+      105,
+      74
+    ],
+    "expected": [
+      "出"
+    ]
+  },
+  "选择时代": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "维新的记忆",
+      "江户的记忆",
+      "织丰的记忆",
+      "战国的记忆",
+      "武家的记忆",
+      "池田屋的记忆",
+      "延享的记忆",
+      "青野原的记忆"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "选择时代。。。"
+    ],
+    "roi": [
+      530,
+      34,
+      220,
+      101
+    ],
+    "template": [
+      "日服时代选择.png"
+    ],
+    "threshold": 0.8
+  },
+  "维新的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择1.维新的记忆。。。"
+    ],
+    "roi": [
+      155,316,177,130
+    ],
+    "expected": [
+      "一","新"
+    ]
+  },
+  "江户的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择2.江户的记忆。。。"
+    ],
+    "roi": [
+      254,
+      438,
+      62,
+      66
+    ],
+    "expected": [
+      "二"
+    ]
+  },
+  "织丰的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择3.织丰的记忆。。。"
+    ],
+    "roi": [
+      353,
+      315,
+      70,
+      56
+    ],
+    "expected": [
+      "三"
+    ]
+  },
+  "战国的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择4.战国的记忆。。。"
+    ],
+    "roi": [
+      451,
+      438,
+      77,
+      65
+    ],
+    "expected": [
+      "四"
+    ]
+  },
+  "武家的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择5.武家的记忆。。。"
+    ],
+    "roi": [
+      559,
+      314,
+      66,
+      58
+    ],
+    "expected": [
+      "五"
+    ]
+  },
+  "池田屋的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择6.池田屋的记忆。。。"
+    ],
+    "roi": [
+      655,
+      441,
+      70,
+      57
+    ],
+    "expected": [
+      "六"
+    ]
+  },
+  "延享的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择7.延享的记忆。。。"
+    ],
+    "roi": [
+      756,
+      304,
+      75,
+      71
+    ],
+    "expected": [
+      "七"
+    ],
+    "replace":["P", "七"]
+  },
+  "青野原的记忆": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "决定"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "已选择8.青野原的记忆。。。"
+    ],
+    "roi": [
+      865,
+      439,
+      55,
+      63
+    ],
+    "expected": [
+      "八"
+    ]
+  },
+  "决定": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "roi": [
+      1103,
+      562,
+      172,
+      146
+    ],
+    "template": [
+      "日服决定.png"
+    ]
+  }
+}

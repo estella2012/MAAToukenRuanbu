@@ -1,0 +1,103 @@
+{
+  "日服出阵": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "日服出阵2"
+    ],
+    "post_wait_freezes": 500,
+    "roi": [
+      897,
+      414,
+      53,
+      101
+    ],
+    "expected": [
+      "出陣"
+    ]
+  },
+  "日服出阵2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "日服決定"
+    ],
+    "post_wait_freezes": 500,
+    "roi": [
+      773,
+      403,
+      133,
+      102
+    ],
+    "expected": [
+      "出陣"
+    ]
+  },
+  "日服即刻出阵": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "日服等待結束戰鬥"
+    ],
+    "roi": [
+      764,
+      355,
+      244,
+      193
+    ],
+    "template": [
+      "日服出陣.png"
+    ]
+  },
+  "日服继续进军": {},
+  "日服无视疲劳": {},
+  "日服決定": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "日服部隊選擇",
+      "日服決定"
+    ],
+    "roi": [
+      809,
+      403,
+      155,
+      104
+    ],
+    "template": [
+      "日服决定.png"
+    ]
+  },
+  "日服部隊選擇": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "日服即刻出阵"
+    ],
+    "roi": [
+      856,
+      437,
+      76,
+      53
+    ],
+    "expected": [
+      "部隊"
+    ]
+  },
+  "日服等待結束戰鬥": {
+    "action": "DoNothing",
+    "next": [
+      "日服即刻出阵",
+      "日服部隊選擇",
+      "日服決定",
+      "日服出阵2",
+      "日服出阵",
+      "日服等待結束戰鬥"
+    ],
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": [
+      "waiting..."
+    ]
+  }
+}

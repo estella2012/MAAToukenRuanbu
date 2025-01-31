@@ -1,0 +1,529 @@
+{
+  "开始活动战斗": {
+    "next": [
+      "继续进军",
+      "演练结束",
+      "出阵",
+      "即刻出阵",
+      "等待结束战斗"
+    ]
+  },
+  "切换主界面": {
+    "recognition": "OCR",
+    "action": "Click",
+    "focus": true,
+    "focus_tip": [
+      "切换主界面？"
+    ],
+    "roi": [
+      1174,
+      8,
+      76,
+      41
+    ],
+    "expected": [
+      "切换",
+      "切"
+    ],
+    "target": [
+      1174,
+      8,
+      76,
+      41
+    ]
+  },
+  "出阵": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "出阵_next"
+    ],
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": [
+      "出阵。。。"
+    ],
+    "roi": [
+      1174,
+      77,
+      85,
+      50
+    ],
+    "expected": [
+      "出阵"
+    ],
+    "target": [
+      1174,
+      77,
+      85,
+      50
+    ]
+  },
+  "出阵_next": {
+    "action": "Click",
+    "next": [
+      "点击活动"
+    ],
+    "post_wait_freezes": 3000,
+    "target": [
+      505,
+      156,
+      153,
+      122
+    ]
+  },
+  "点击活动": {
+    "action": "Click",
+    "next": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "post_wait_freezes": 2000,
+    "focus": true,
+    "focus_tip": [
+      "进入活动。。。"
+    ],
+    "target": [
+      523,
+      210,
+      238,
+      54
+    ]
+  },
+  "e1": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "部队选择"
+    ],
+    "enabled": false,
+    "focus_tip": [
+      "e1"
+    ],
+    "roi": [
+      55,
+      118,
+      180,
+      101
+    ],
+    "expected": [
+      "一",
+      "函館"
+    ]
+  },
+  "e2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "部队选择"
+    ],
+    "enabled": false,
+    "focus": true,
+    "focus_tip": [
+      "e2"
+    ],
+    "roi": [
+      380,
+      123,
+      126,
+      100
+    ],
+    "expected": [
+      "二"
+    ]
+  },
+  "e3": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "部队选择"
+    ],
+    "enabled": false,
+    "focus": true,
+    "focus_tip": [
+      "e3"
+    ],
+    "roi": [
+      663,
+      118,
+      74,
+      73
+    ],
+    "expected": [
+      "三"
+    ]
+  },
+  "e4": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "部队选择"
+    ],
+    "enabled": false,
+    "focus": true,
+    "focus_tip": [
+      "e4"
+    ],
+    "roi": [
+      960,
+      125,
+      68,
+      62
+    ],
+    "expected": [
+      "四",
+      ""
+    ]
+  },
+  "即刻出阵": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "等待结束战斗"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "即刻出阵！！！"
+    ],
+    "roi": [
+      1092,
+      528,
+      187,
+      178
+    ],
+    "template": [
+      "日服出阵.png"
+    ]
+  },
+  "部队选择": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "队1",
+      "队2",
+      "队3"
+    ],
+    "timeout": 2000,
+    "enabled": true,
+    "focus": true,
+    "focus_succeeded": [
+      "选择部队"
+    ],
+    "focus_failed": [
+      "未找到部队选择"
+    ],
+    "roi": [
+      1104,
+      545,
+      175,
+      174
+    ],
+    "template": [
+      "日服部队选择.png"
+    ]
+  },
+  "队1": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "即刻出阵"
+    ],
+    "enabled": true,
+    "focus": true,
+    "focus_tip": [
+      "选择部队1。。。"
+    ],
+    "roi": [
+      151,
+      72,
+      50,
+      41
+    ],
+    "expected": [
+      "一"
+    ]
+  },
+  "队2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "即刻出阵"
+    ],
+    "enabled": true,
+    "focus": true,
+    "focus_tip": [
+      "选择部队2。。。"
+    ],
+    "roi": [
+      273,
+      73,
+      49,
+      42
+    ],
+    "expected": [
+      "二"
+    ]
+  },
+  "队3": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "即刻出阵"
+    ],
+    "enabled": true,
+    "focus": true,
+    "focus_tip": [
+      "选择部队3。。。"
+    ],
+    "roi": [
+      402,
+      71,
+      42,
+      45
+    ],
+    "expected": [
+      "三"
+    ]
+  },
+  "等待结束战斗": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "关闭重伤弹窗",
+      "海联继续战斗",
+      "演练结束",
+      "阵型选择",
+      "点击出阵",
+      "部队选择",
+      "王点检测",
+      "继续进军",
+      "等待结束战斗"
+    ],
+    "inverse": false,
+    "post_wait_freezes": 100,
+    "target": [
+      5,
+      37,
+      78,
+      86
+    ]
+  },
+  "继续进军": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "关闭重伤弹窗",
+      "继续演练",
+      "等待结束战斗"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "继续进军！！！"
+    ],
+    "roi": [
+      1057,
+      550,
+      144,
+      86
+    ],
+    "connected": false,
+    "expected": [
+      "行"
+    ]
+  },
+  "演练结束": {
+    "recognition": "OCR",
+    "next": [
+      "继续演练"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "演练结束————————"
+    ],
+    "roi": [
+      723,
+      284,
+      143,
+      149
+    ],
+    "expected": [
+      "继续",
+      "演练"
+    ]
+  },
+  "继续演练": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "关闭重伤弹窗",
+      "等待结束战斗"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "继续演练。。。"
+    ],
+    "roi": [
+      723,
+      285,
+      149,
+      145
+    ],
+    "expected": [
+      "继续",
+      "演练"
+    ],
+    "target": [
+      723,
+      285,
+      149,
+      145
+    ]
+  },
+  "道中返回本丸": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击是"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "重伤，道中返回本丸 : ("
+    ],
+    "roi": [
+      1141,
+      374,
+      138,
+      137
+    ],
+    "expected": [
+      "本丸"
+    ]
+  },
+  "王点前返回本丸": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击是后继续出阵"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "不进王点，返回本丸"
+    ],
+    "roi": [
+      1129,
+      368,
+      150,
+      152
+    ],
+    "expected": [
+      "本丸"
+    ]
+  },
+  "返回本丸": {
+    "action": "Click",
+    "next": [
+      "点击是"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "重伤，返回本丸 : ("
+    ],
+    "roi": [
+      1143,
+      379,
+      130,
+      134
+    ],
+    "expected": [
+      "本丸"
+    ]
+  },
+  "关闭重伤弹窗": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "道中返回本丸",
+      "返回本丸"
+    ],
+    "focus": true,
+    "focus_tip": [
+      "点击否"
+    ],
+    "roi": [
+      389,
+      459,
+      226,
+      118
+    ],
+    "template": [
+      "否.png"
+    ]
+  },
+  "点击是": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "focus": true,
+    "focus_tip": [
+      "点击是"
+    ],
+    "roi": [
+      675,
+      454,
+      225,
+      109
+    ],
+    "template": [
+      "是.png"
+    ]
+  },
+  "点击是后继续出阵": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "点击出阵",
+      "等待结束战斗"
+    ],
+    "roi": [
+      657,
+      452,
+      260,
+      132
+    ],
+    "template": [
+      "是.png"
+    ]
+  },
+  "阵型选择": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "等待结束战斗"
+    ],
+    "enabled": false,
+    "focus": true,
+    "focus_tip": [
+      "识别失败，选择逆行阵。。。"
+    ],
+    "roi": [
+      1122,
+      337,
+      123,
+      178
+    ],
+    "expected": [
+      "逆",
+      "行",
+      "阵"
+    ]
+  },
+  "未命名": {
+    "roi": [
+      873,
+      635,
+      135,
+      36
+    ]
+  }
+}

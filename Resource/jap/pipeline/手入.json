@@ -1,0 +1,132 @@
+{
+  "点击目录": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击手入"
+    ],
+    "enabled": true,
+    "roi": [
+      1178,
+      6,
+      95,
+      68
+    ],
+    "expected": [
+      "目"
+    ]
+  },
+  "点击手入": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击未使用"
+    ],
+    "enabled": true,
+    "pre_wait_freezes": 1000,
+    "roi": [
+      365,
+      351,
+      255,
+      93
+    ],
+    "expected": [
+      "手",
+      "手入"
+    ]
+  },
+  "点击未使用": {
+    "action": "Click",
+    "next": [
+      "选择手入对象"
+    ],
+    "roi": [
+      283,
+      140,
+      288,
+      526
+    ],
+    "expected": [
+      "未使用",
+      "使用"
+    ]
+  },
+  "选择手入对象": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "手入开始"
+    ],
+    "on_error": [
+      "返回"
+    ],
+    "roi": [
+      444,
+      112,
+      688,
+      585
+    ],
+    "template": [
+      "日服选择.png"
+    ],
+    "threshold": 0.8
+  },
+  "手入开始": {
+    "recognition": "OCR",
+    "next": [
+      "已返回手入部屋"
+    ],
+    "roi": [
+      1128,
+      566,
+      144,
+      124
+    ],
+    "expected": [
+      "手入",
+      "手"
+    ]
+  },
+  "已返回手入部屋": {
+    "next": [
+      "点击未使用"
+    ],
+    "roi": [
+      570,
+      57,
+      142,
+      41
+    ],
+    "expected": [
+      "手入部屋",
+      "手入"
+    ]
+  },
+  "返回": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "等待结束战斗"
+    ],
+    "focus_tip": [
+      ""
+    ],
+    "roi": [
+      86,
+      29,
+      108,
+      112
+    ],
+    "template": [
+      "返回.png"
+    ]
+  },
+  "开始手入": {
+    "next": [
+      "点击目录"
+    ],
+    "focus": false,
+    "focus_tip": [
+      "开始手入。。。"
+    ]
+  }
+}

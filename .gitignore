@@ -37,8 +37,8 @@ build-*
 *.out
 *.app
 
-Debug
-Release
+[Dd]ebug/
+[Rr]elease/
 .vs
 *.vcxproj.user
 *.swp

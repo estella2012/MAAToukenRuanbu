@@ -1,0 +1,262 @@
+{
+  "点击出阵-远征": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "点击远征",
+      "等待结束战斗"
+    ],
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": "點擊出阵。。。",
+    "roi": [
+      1174,
+      77,
+      85,
+      50
+    ],
+    "expected": "出阵",
+    "target": [
+      1174,
+      77,
+      85,
+      50
+    ]
+  },
+  "点击远征": {
+    "recognition": "OCR",
+    "action": "Click",
+    "focus": true,
+    "focus_tip": "进入远征",
+    "roi": [
+      226,
+      624,
+      199,
+      48
+    ],
+    "expected": [
+      "派遣部队去远征",
+      "远征"
+    ],
+    "target": true
+  },
+  "选择时代-远征": {
+    "recognition": "OCR",
+    "next": [
+      "维新的记忆2",
+      "江户的记忆2",
+      "织丰的记忆2",
+      "战国的记忆2"
+    ],
+    "interrupt": "点击向右2",
+    "focus": true,
+    "focus_tip": "选择时代。。。",
+    "roi": [
+      465,65,235,44
+    ],
+    "expected": [
+      "选择远征目的地",
+      "远征"
+    ]
+  },
+  "点击向右2": {
+    "action": "Click",
+    "target": [
+      786,198,48,99
+    ]
+  },
+  "维新的记忆2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1-远征",
+      "e2-远征",
+      "e3-远征",
+      "e4-远征"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择1.维新的记忆。。。",
+    "roi": [
+      171,190,582,103
+    ],
+    "expected": [
+      "维新的记忆",
+      "维新"
+    ],
+    "target": true
+  },
+  "江户的记忆2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1-远征",
+      "e2-远征",
+      "e3-远征",
+      "e4-远征"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择2.江户的记忆。。。",
+    "roi": [
+      171,190,582,103
+    ],
+    "expected": [
+      "江户的记忆",
+      "江户"
+    ],
+    "target": true
+  },
+  "织丰的记忆2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1-远征",
+      "e2-远征",
+      "e3-远征",
+      "e4-远征"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择3.织丰的记忆。。。",
+    "roi": [
+      171,190,582,103
+    ],
+    "expected": [
+      "织丰的记忆",
+      "织丰"
+    ],
+    "target": true
+  },
+  "战国的记忆2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "e1-远征",
+      "e2-远征",
+      "e3-远征",
+      "e4-远征"
+    ],
+    "timeout": 1000,
+    "enabled": false,
+    "post_wait_freezes": 500,
+    "focus": true,
+    "focus_tip": "已选择4.战国的记忆。。。",
+    "roi": [
+      171,190,582,103
+    ],
+    "expected2": [
+      "战国的记忆",
+      "战国"
+    ],
+    "target": true
+  },
+  "e1-远征": {
+    "action": "Click",
+    "next": [
+      "队1",
+      "队2",
+      "队3",
+      "部队选择"
+    ],
+    "enabled": false,
+    "pre_wait_freezes": 500,
+    "post_wait_freezes": 1000,
+    "focus_tip": "e1",
+    "target": [
+      353,391,99,71
+    ]
+  },
+  "e2-远征": {
+    "action": "Click",
+    "next": [
+      "队1",
+      "队2",
+      "队3",
+      "部队选择"
+    ],
+    "enabled": false,
+    "pre_wait_freezes": 500,
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": "e2",
+    "target": [
+      698,387,118,84
+    ]
+  },
+  "e3-远征": {
+    "action": "Click",
+    "next": [
+      "队1",
+      "队2",
+      "队3",
+      "部队选择"
+    ],
+    "enabled": false,
+    "pre_wait_freezes": 500,
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": "e3",
+    "target": [
+      341,543,122,80
+    ]
+  },
+  "e4-远征": {
+    "action": "Click",
+    "next": [
+      "队1",
+      "队2",
+      "队3",
+      "部队选择"
+    ],
+    "enabled": false,
+    "pre_wait_freezes": 500,
+    "post_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": "e4",
+    "target": [
+      705,547,106,75
+    ]
+  },
+  "开始远征": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": "等待结束战斗",
+    "pre_wait_freezes": 1000,
+    "focus": true,
+    "focus_tip": "派遣远征",
+    "roi": [
+      817,584,223,98
+    ],
+    "expected": [
+      "远征开始"
+    ],
+    "target": [
+      817,584,223,98
+    ]
+  },
+  "检测已派遣部队":{
+    "recognition": "OCR",
+    "next": "返回本丸",
+    "focus": true,
+    "focus_tip": "当前地图已有派遣部队",
+    "expected": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ]
+  }
+}

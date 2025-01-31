@@ -1,6 +1,6 @@
 {
   "name": "MPA",
-  "url": "https://github.com/overflow65537/MAA_Punish",
+  "url": "",
   "custom_title": "MFAWPF_MPA",
   "default_controller": "adb",
   "controller": [
@@ -14,6 +14,12 @@
       "name": "官服",
       "path": [
         "{PROJECT_DIR}/resource/base"
+      ]
+    },
+    {
+      "name": "日服",
+      "path": [
+        "{PROJECT_DIR}/resource/jap"
       ]
     }
   ],
@@ -56,7 +62,7 @@
             "阵型选择",
             "横队阵",
             "关闭重伤弹窗",
-            "王点检测7-4",
+            "王点检测",
             "继续进军",
             "演练结束",
             "出阵",
@@ -108,9 +114,61 @@
       }
     },
     {
+      "name": "海联e4",
+      "entry": "开始活动战斗",
+      "doc": "默认队3刷e4",
+      "option": [
+        "选择队伍"
+      ],
+      "pipeline_override": {
+        "开始活动战斗": {
+          "next": [
+            "海联通行证不足",
+            "海联通行证不足2",
+            "海联继续战斗",
+            "即刻出阵",
+            "部队选择",
+            "出阵",
+            "等待结束战斗"
+          ]
+        },
+        "e1": {
+          "enabled": false
+        },
+        "e2": {
+          "enabled": false
+        },
+        "e3": {
+          "enabled": false
+        },
+        "e4": {
+          "enabled": true
+        },
+        "等待结束战斗": {
+          "next": [
+            "海联通行证不足",
+            "海联通行证不足2",
+            "海联继续战斗",
+            "即刻出阵",
+            "出阵",
+            "等待结束战斗"
+          ]
+        },
+        "即刻出阵":{
+          "next": [
+            "海联通行证不足2",
+            "海联确认2",
+            "出阵确认",
+            "等待结束战斗"
+          ]
+        }
+        
+      }
+    },
+    {
       "name": "主线loop",
       "entry": "开始主线战斗",
-      "doc": "仅7-4不进王点支持",
+      "doc": "仅7-4, 8-1, 日服4-4(2图测试)不进王点支持",
       "option": [
         "选择时代",
         "选择地图",
@@ -151,7 +209,6 @@
               ]
             },
             "部队选择": {
-              "recognition": "OCR",
               "action": "Click",
               "next": [
                 "队1"
@@ -187,7 +244,6 @@
               ]
             },
             "部队选择": {
-              "recognition": "OCR",
               "action": "Click",
               "next": [
                 "队2"
@@ -223,7 +279,6 @@
               ]
             },
             "部队选择": {
-              "recognition": "OCR",
               "action": "Click",
               "next": [
                 "队3"
@@ -342,7 +397,7 @@
         {
           "name": "是",
           "pipeline_override": {
-            "王点检测7-4": {
+            "王点检测": {
               "enabled": true
             }
           }
@@ -350,13 +405,12 @@
         {
           "name": "否",
           "pipeline_override": {
-            "王点检测7-4": {
+            "王点检测": {
               "enabled": false
             }
           }
         }
       ]
-
     },
     "手动选择阵型": {
       "cases": [
@@ -366,8 +420,7 @@
             "阵型选择": {
               "enabled": true
             },
-            "横队阵":
-            {
+            "横队阵": {
               "enabled": false
             }
           }
@@ -378,14 +431,12 @@
             "阵型选择": {
               "enabled": false
             },
-            "横队阵":
-            {
+            "横队阵": {
               "enabled": true
             }
           }
         }
       ]
-
     }
   },
   "version": "v1.3.3"
