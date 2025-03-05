@@ -89,6 +89,7 @@
     ]
   },
   "点击活动": {
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "e1",
@@ -96,10 +97,20 @@
       "e3",
       "e4"
     ],
-    "post_wait_freezes": 2000,
+    "post_wait_freezes": 500,
     "focus": true,
     "focus_tip": [
       "进入活动。。。"
+    ],
+    "roi": [
+      588,
+      143,
+      122,
+      46
+    ],
+    "expected": [
+      "活动进行中",
+      "活动"
     ],
     "target": [
       523,
@@ -153,6 +164,7 @@
     ]
   },
   "e3": {
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "队1",
@@ -167,14 +179,24 @@
     "focus_tip": [
       "e3"
     ],
+    "roi": [
+      895,
+      70,
+      160,
+      41
+    ],
+    "expected": [
+      "返回"
+    ],
     "target": [
-      179,
-      501,
-      239,
-      96
+      288,
+      534,
+      3,
+      6
     ]
   },
   "e4": {
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "队1",
@@ -189,11 +211,20 @@
     "focus_tip": [
       "e4"
     ],
+    "roi": [
+      895,
+      70,
+      160,
+      41
+    ],
+    "expected": [
+      "返回"
+    ],
     "target": [
-      496,
-      487,
-      287,
-      120
+      628,
+      530,
+      5,
+      7
     ]
   },
   "即刻出阵": {
@@ -581,8 +612,7 @@
     "expected": [
       "逆行阵",
       "逆"
-    ],
-    "target": "True"
+    ]
   },
   "横队阵": {
     "recognition": "OCR",
@@ -605,8 +635,7 @@
     "expected": [
       "横队阵",
       "横"
-    ],
-    "target": "True"
+    ]
   },
   "确认选择": {
     "recognition": "OCR",
@@ -624,6 +653,11 @@
     "action": "Click",
     "next": [
       "等待结束战斗"
+    ],
+    "post_wait_freezes": 3000,
+    "focus": true,
+    "focus_tip": [
+      "出征确认"
     ],
     "roi": [
       399,

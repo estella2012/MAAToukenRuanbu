@@ -82,20 +82,21 @@
     "next": [
       "王点前返回本丸"
     ],
+    "enabled": true,
     "focus": true,
     "focus_tip": [
       "4-3王点"
     ],
     "roi": [
-      1113,
-      184,
-      46,
-      53
+      1117,
+      186,
+      28,
+      36
     ],
     "template": [
-      "4-3王点前.png"
+      "4-3王点前2.png"
     ],
-    "threshold": 0.9
+    "threshold": 0.8
   },
   "王点检测4-4": {
     "recognition": "TemplateMatch",

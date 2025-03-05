@@ -118,7 +118,7 @@
       "entry": "开始活动战斗",
       "doc": "默认队3刷e4",
       "option": [
-        "选择队伍"
+        "选择队伍","选择地图"
       ],
       "pipeline_override": {
         "开始活动战斗": {
@@ -131,18 +131,6 @@
             "出阵",
             "等待结束战斗"
           ]
-        },
-        "e1": {
-          "enabled": false
-        },
-        "e2": {
-          "enabled": false
-        },
-        "e3": {
-          "enabled": false
-        },
-        "e4": {
-          "enabled": true
         },
         "等待结束战斗": {
           "next": [

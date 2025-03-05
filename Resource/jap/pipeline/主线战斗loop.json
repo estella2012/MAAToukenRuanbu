@@ -234,7 +234,7 @@
     "expected": [
       "七"
     ],
-    "replace":["P", "七"]
+    "replace":[["P", "七"],["X", "七"]]
   },
   "青野原的记忆": {
     "recognition": "OCR",

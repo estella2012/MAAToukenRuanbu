@@ -117,7 +117,11 @@
     "next": [
       "等待结束战斗"
     ],
-    "post_wait_freezes": 2000,
+    "post_wait_freezes": 5000,
+    "focus": true,
+    "focus_tip": [
+      "海联出阵确认"
+    ],
     "roi": [
       520,
       547,
