@@ -1,3 +1,4 @@
+debug/
 # docs
 docs/node_modules
 docs/.vuepress/.temp
@@ -446,3 +447,5 @@ install
 
 # Tools
 tools/ImageCropper/**/*.png
+debug/maa.bak.log
+debug/maa.log

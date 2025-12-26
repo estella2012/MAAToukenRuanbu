@@ -5,12 +5,12 @@
   "LangIndex": 0,
   "EnableEdit": true,
   "AdbDevice": {
-    "Name": "MuMuPlayer12",
-    "AdbPath": "C:/Program Files/Netease/MuMuPlayerGlobal-12.0/shell/adb.exe",
+    "Name": "模拟器",
+    "AdbPath": "F:\\Netease\\MuMuPlayerGlobal-12.0\\shell\\adb.exe",
     "AdbSerial": "127.0.0.1:16416",
     "ScreencapMethods": 18446744073709551559,
     "InputMethods": 2,
-    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":1,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
+    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":0,\"path\":\"F:/Netease/MuMuPlayerGlobal-12.0\"}}}"
   },
   "TaskItems": [
     {
@@ -27,6 +27,58 @@
       "name": "关闭公告",
       "entry": "关闭公告",
       "check": false
+    },
+    {
+      "name": "海联e4",
+      "entry": "开始活动战斗",
+      "doc": "默认队3刷e4",
+      "check": true,
+      "option": [
+        {
+          "name": "补充通行证",
+          "index": 1
+        }
+      ],
+      "pipeline_override": {
+        "开始活动战斗": {
+          "next": [
+            "海联通行证不足",
+            "海联通行证不足2",
+            "海联继续战斗",
+            "即刻出阵",
+            "部队选择",
+            "出阵",
+            "等待结束战斗"
+          ],
+          "focus": true,
+          "focus_tip": [
+            "海聯開始？"
+          ]
+        },
+        "等待结束战斗": {
+          "next": [
+            "海联通行证不足",
+            "海联通行证不足2",
+            "海联继续战斗",
+            "部队选择",
+            "即刻出阵",
+            "出阵",
+            "等待结束战斗"
+          ]
+        },
+        "即刻出阵": {
+          "next": [
+            "海联确认2",
+            "部队选择",
+            "等待结束战斗"
+          ]
+        },
+        "部队选择": {
+          "next": [
+            "即刻出阵"
+          ]
+        }
+      }
     },
     {
       "name": "活动e3",
@@ -243,13 +295,7 @@
       "name": "海联e4",
       "entry": "开始活动战斗",
       "doc": "默认队3刷e4",
-      "check": true,
-      "option": [
-        {
-          "name": "选择队伍",
-          "index": 2
-        }
-      ],
+      "check": false,
       "pipeline_override": {
         "开始活动战斗": {
           "next": [
@@ -260,25 +306,18 @@
             "部队选择",
             "出阵",
             "等待结束战斗"
+          ],
+          "focus": true,
+          "focus_tip": [
+            "海聯開始？"
           ]
-        },
-        "e1": {
-          "enabled": false
-        },
-        "e2": {
-          "enabled": false
-        },
-        "e3": {
-          "enabled": false
-        },
-        "e4": {
-          "enabled": true
         },
         "等待结束战斗": {
           "next": [
             "海联通行证不足",
             "海联通行证不足2",
             "海联继续战斗",
+            "部队选择",
             "即刻出阵",
             "出阵",
             "等待结束战斗"
@@ -286,10 +325,13 @@
         },
         "即刻出阵": {
           "next": [
-            "海联通行证不足2",
             "海联确认2",
-            "出阵确认",
             "等待结束战斗"
+          ]
+        },
+        "部队选择": {
+          "next": [
+            "即刻出阵"
           ]
         }
       }
@@ -298,5 +340,5 @@
   "StartEmulator": false,
   "WaitEmulatorTime": 30.0,
   "EmulatorPath": "C:\\Program Files\\Netease\\MuMuPlayerGlobal-12.0\\shell\\MuMuPlayer.exe",
-  "ResourceIndex": 0
+  "ResourceIndex": 1
 }

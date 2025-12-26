@@ -3,31 +3,132 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "海联等待结束战斗"
+      "等待结束战斗"
     ],
     "roi": [
-      757,
-      221,
-      174,
-      165
+      1019,
+      542,
+      151,
+      105
     ],
     "expected": [
       "用现在的部队",
       "战斗"
     ]
   },
-  "海联等待结束战斗": {
+  "海联通行证不足": {
+    "recognition": "TemplateMatch",
+    "action": "DoNothing",
+    "next": [
+      "海联补充通行证"
+    ],
+    "focus": true,
+    "focus_succeeded": [
+      "通行证不足，正在补充通行证"
+    ],
+    "roi": [
+      202,
+      190,
+      363,
+      68
+    ],
+    "template": [
+      "海联通行证不足.png"
+    ],
+    "threshold": 0.9
+  },
+  "海联通行证不足2": {
+    "recognition": "OCR",
     "action": "Click",
     "next": [
-      "海联继续战斗",
-      "海联等待结束战斗"
+      "海联补充确认"
     ],
-    "post_wait_freezes": 500,
-    "target": [
-      5,
-      37,
+    "enabled": false,
+    "focus": true,
+    "focus_succeeded": [
+      "通行证不足，正在补充通行证"
+    ],
+    "roi": [
+      406,
+      394,
+      236,
+      78
+    ],
+    "expected": [
+      "补充"
+    ]
+  },
+  "海联补充通行证": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "海联补充确认"
+    ],
+    "roi": [
+      545,
+      192,
+      180,
+      63
+    ],
+    "expected": [
+      "用小判补充",
+      "补充",
+      "小"
+    ]
+  },
+  "海联补充确认": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "海联确认"
+    ],
+    "roi": [
+      536,
+      473,
+      211,
+      132
+    ],
+    "expected": [
+      "恢复3个",
+      "900",
+      "恢复"
+    ]
+  },
+  "海联确认2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "等待结束战斗"
+    ],
+    "post_wait_freezes": 5000,
+    "focus": true,
+    "focus_tip": [
+      "海联出阵确认"
+    ],
+    "roi": [
+      591,
+      580,
+      86,
+      47
+    ],
+    "expected": [
+      "确定"
+    ]
+  },
+  "海联确认": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "部队选择"
+    ],
+    "roi": [
+      601,
+      439,
       78,
-      86
+      53
+    ],
+    "expected": [
+      "确定"
     ]
   }
 }

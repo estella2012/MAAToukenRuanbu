@@ -179,7 +179,7 @@
     ]
   },
   "即刻出阵": {
-    "recognition": "TemplateMatch",
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "等待结束战斗"
@@ -189,17 +189,18 @@
       "即刻出阵！！！"
     ],
     "roi": [
-      1092,
-      528,
-      187,
-      178
+      1148,
+      570,
+      108,
+      106
     ],
-    "template": [
-      "日服出阵.png"
+    "expected": [
+      "即刻",
+      "出阵"
     ]
   },
   "部队选择": {
-    "recognition": "TemplateMatch",
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "队1",
@@ -216,13 +217,13 @@
       "未找到部队选择"
     ],
     "roi": [
-      1104,
-      545,
-      175,
-      174
+      1141,
+      618,
+      120,
+      41
     ],
-    "template": [
-      "日服部队选择.png"
+    "expected": [
+      "部队选择"
     ]
   },
   "队1": {
@@ -231,19 +232,20 @@
     "next": [
       "即刻出阵"
     ],
-    "enabled": true,
+    "enabled": false,
     "focus": true,
     "focus_tip": [
       "选择部队1。。。"
     ],
     "roi": [
-      151,
-      72,
-      50,
-      41
+      101,
+      70,
+      98,
+      44
     ],
     "expected": [
-      "一"
+      "一",
+      "部队一"
     ]
   },
   "队2": {
@@ -252,19 +254,20 @@
     "next": [
       "即刻出阵"
     ],
-    "enabled": true,
+    "enabled": false,
     "focus": true,
     "focus_tip": [
       "选择部队2。。。"
     ],
     "roi": [
-      273,
+      224,
       73,
-      49,
-      42
+      95,
+      39
     ],
     "expected": [
-      "二"
+      "二",
+      "部队二"
     ]
   },
   "队3": {
@@ -273,18 +276,19 @@
     "next": [
       "即刻出阵"
     ],
-    "enabled": true,
+    "enabled": false,
     "focus": true,
     "focus_tip": [
       "选择部队3。。。"
     ],
     "roi": [
-      402,
-      71,
-      42,
-      45
+      347,
+      74,
+      94,
+      40
     ],
     "expected": [
+      "部队三",
       "三"
     ]
   },
@@ -305,10 +309,10 @@
     "post_wait_freezes": 1000,
     "focus": false,
     "target": [
-      113,
-      111,
-      8,
-      12
+      602,
+      148,
+      62,
+      40
     ]
   },
   "继续进军": {
